@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Society - Our Members</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        /* Grid Layout for Members */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust number of columns based on screen size */
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .member-card {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .member-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+
+        .member-card h3 {
+            margin: 0;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .member-card p {
+            font-size: 1em;
+            color: #555;
+        }
+        .dark-mode .member-card {
+            background-color: var(--card-dark-bg);
+            color: var(--card-text-dark);
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes riseUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="indexx.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="works.html">Our Works</a>
+            <a href="members.html">Our Members</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" onclick="toggleDarkMode()">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </nav>
+    <script>
+        
+    </script>
+
+    <!-- Our Members Section -->
+<div id="members" class="section">
+    <h2>Our Members</h2>
+    <div class="members-grid">
+        <!-- Member Cards -->
+        <div class="member-card">
+            <img src="members/rojina.png" alt="President">
+            <h3>President</h3>
+            <p>Rojina Adhikari</p>
+        </div>
+        <div class="member-card">
+            <img src="members/default.png" alt="Vice President 1">
+            <h3>Vice President</h3>
+            <p>Yunish Khatri</p>
+        </div>
+        <div class="member-card">
+            <img src="members/Nijam.jpg" alt="Vice President 2">
+            <h3>Vice President</h3>
+            <p>Nijam Karki</p>
+        </div>
+        <div class="member-card">
+            <img src="members/pragyan2.jpg" alt="IT Head">
+            <h3>IT Head</h3>
+            <p>Pragyan Khadka</p>
+        </div>
+        <div class="member-card">
+            <img src="members/also also biplov.jpg" alt="Web Master">
+            <h3>Web Master</h3>
+            <p>Biplov Katuwal</p>
+        </div>
+        <div class="member-card">
+            <img src="members/puskar.jpg" alt="Coordinator">
+            <h3>Coordinator</h3>
+            <p>Puskar Joshi</p>
+        </div>
+        <div class="member-card">
+            <img src="members/suvamshu.jpg" alt="Treasurer">
+            <h3>Treasurer</h3>
+            <p>Suvamshu Khadka</p>
+        </div>
+        <div class="member-card">
+            <img src="members/dilasha.jpg" alt="Executive Head">
+            <h3>Executive Head</h3>
+            <p>Dilasha Dulal</p>
+        </div>
+        <div class="member-card">
+            <img src="members/default.png" alt="Program Incharge">
+            <h3>Program Incharge</h3>
+            <p>Cele Shilpakar</p>
+        </div>
+        <div class="member-card">
+            <img src="members/default.png" alt="Program Incharge">
+            <h3>Program Incharge</h3>
+            <p>Priya Basnet</p>
+            </div>
+        <div class="member-card">
+            <img src="members/jenisha.jpg" alt="Secretary">
+            <h3>Secretary</h3>
+            <p>Jenisha Gho Shrestha</p>
+        </div>
+        <div class="member-card">
+            <img src="members/smriti panday 2.jpg" alt="Advisor">
+            <h3>Advisor</h3>
+            <p>Smriti Panday</p>
+        </div>
+        <div class="member-card">
+            <img src="members/salena2.jpg" alt="Advisor">
+            <h3>Advisor</h3>
+            <p>Salena Koirala</p>
+        </div>
+        <div class="member-card">
+            <img src="members/rozeena.jpg" alt="Advisor">
+            <h3>Advisor</h3>
+            <p>Rozeena Chaudhary</p>
+        </div>
+        <div class="member-card">
+            <img src="members/mishra 2.jpg" alt="Advisor">
+            <h3>Advisor</h3>
+            <p>Ambikesh Mishra</p>
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

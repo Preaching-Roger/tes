@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --light-bg: #ffffff;
+    --light-text: #000080;
+    --dark-bg: #0d1b2a;
+    --dark-text: #ffffff;
+    --toggle-light: #ccc;
+    --toggle-dark: #6a5acd;
+    --nav-light: #000080;
+    --nav-dark: #6a5acd;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--nav-light);
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dark-mode nav {
+    background-color: var(--nav-dark);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-light);
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.dark-mode .slider {
+    background-color: var(--toggle-dark);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    opacity: 0;
+    animation: fadeInText 2s ease-out forwards;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: riseUp 2s ease-out forwards;
+}
+
+.slogan {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeInText 2s ease-out 1s forwards;
+}
+
+/* Animations */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes riseUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Adding the transition effect */
+.page {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page.fade-out {
+    opacity: 0;
+}
+
+.page.fade-in {
+    opacity: 1;
+}
+
+/* Optional: Add a background fade effect if needed */
+.page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.page-background.fade-out {
+    background-color: #000000;
+}
+
+.page-background.fade-in {
+    background-color: #ffffff;
+}
